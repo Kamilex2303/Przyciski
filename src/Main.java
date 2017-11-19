@@ -1,13 +1,14 @@
 import java.awt.* ;
 import java.awt.event.* ;
 import javax.swing.*;
+import java.awt.BorderLayout;
 
 class Main extends JFrame{
     int i = 0 ;
     int sprawdz = 0;
     JTextField t = new JTextField(20);
-    JTextField t2 = new JTextField(5);
-    JTextField t3 = new JTextField(5);
+    JTextField t2 = new JTextField(20);
+    JTextField t3 = new JTextField(20);
     JButton b1 = new JButton("przycisk 1") ;
     JButton b2 = new JButton("przycisk 2") ;
     JButton b3 = new JButton("przycisk 3") ;
@@ -16,7 +17,7 @@ class Main extends JFrame{
     Main(){
         setTitle("Przyciski");
         Container cp = getContentPane();
-        cp.setLayout(new FlowLayout()) ;
+        cp.setLayout(new FlowLayout());
         cp.add(b1);
         cp.add(b2);
         cp.add(b3);
@@ -58,8 +59,8 @@ class Main extends JFrame{
                 sprawdz--;
             }
             ++i;
-            t2.setText(String.valueOf(i));
-            t3.setText(String.valueOf(sprawdz));
+            t2.setText(String.valueOf("Licznik + : "+i));
+            t3.setText(String.valueOf("Sprawdz : "+sprawdz));
             if(sprawdz==2) {
                 if (b2.getBackground() == Color.yellow) {
                     b3.setEnabled(false);
@@ -96,8 +97,8 @@ class Main extends JFrame{
                 sprawdz--;
             }
             ++i;
-            t2.setText(String.valueOf(i));
-            t3.setText(String.valueOf(sprawdz));
+            t2.setText(String.valueOf("Licznik + : "+i));
+            t3.setText(String.valueOf("Sprawdz : "+sprawdz));
             if(sprawdz==2) {
                 if (b1.getBackground() == Color.yellow) {
                     b3.setEnabled(false);
@@ -131,8 +132,8 @@ class Main extends JFrame{
                 sprawdz--;
             }
             ++i;
-            t2.setText(String.valueOf(i));
-            t3.setText(String.valueOf(sprawdz));
+            t2.setText(String.valueOf("Licznik + : "+i));
+            t3.setText(String.valueOf("Sprawdz : "+sprawdz));
             if (sprawdz == 2) {
                 if (b1.getBackground() == Color.yellow) {
                     b2.setEnabled(false);
@@ -167,8 +168,8 @@ class Main extends JFrame{
                 sprawdz--;
             }
             ++i;
-            t2.setText(String.valueOf(i));
-            t3.setText(String.valueOf(sprawdz));
+            t2.setText(String.valueOf("Licznik + : "+i));
+            t3.setText(String.valueOf("Sprawdz : "+sprawdz));
             if (sprawdz == 2) {
                 if (b1.getBackground() == Color.yellow) {
                     b2.setEnabled(false);
