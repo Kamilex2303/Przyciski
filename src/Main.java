@@ -41,7 +41,6 @@ class Main extends JFrame{
 
     class B1 implements ActionListener {
         int licznik = 0;
-        boolean zolty;
         public void actionPerformed(ActionEvent e) {
             t.setText("P1 - nieaktywny");
             b1.setEnabled(false);
@@ -52,12 +51,10 @@ class Main extends JFrame{
                 b1.setBackground(Color.yellow);
                 licznik++;
                 sprawdz++;
-                zolty = true;
             }
             else {
                 b1.setBackground(Color.green);
                 licznik++;
-                zolty = false;
                 sprawdz--;
             }
             ++i;
@@ -82,7 +79,6 @@ class Main extends JFrame{
 
     class B2 implements ActionListener {
         int licznik = 0;
-        boolean zolty;
         public void actionPerformed(ActionEvent e) {
             t.setText("P2 - nieaktywny");
             b1.setEnabled(true);
@@ -93,13 +89,10 @@ class Main extends JFrame{
                 b2.setBackground(Color.yellow);
                 licznik++;
                 sprawdz++;
-                zolty = true;
-
             }
             else {
                 b2.setBackground(Color.green);
                 licznik++;
-                zolty = false;
                 sprawdz--;
             }
             ++i;
@@ -122,8 +115,6 @@ class Main extends JFrame{
 
     class B3 implements ActionListener {
         int licznik = 0;
-        boolean zolty;
-
         public void actionPerformed(ActionEvent e) {
             t.setText("P3 - nieaktywny");
             b1.setEnabled(true);
@@ -134,11 +125,9 @@ class Main extends JFrame{
                 b3.setBackground(Color.yellow);
                 licznik++;
                 sprawdz++;
-                zolty = true;
             } else {
                 b3.setBackground(Color.green);
                 licznik++;
-                zolty = false;
                 sprawdz--;
             }
             ++i;
@@ -162,8 +151,6 @@ class Main extends JFrame{
 
     class B4 implements ActionListener {
         int licznik = 0;
-        boolean zolty;
-
         public void actionPerformed(ActionEvent e) {
             t.setText("P4 - nieaktywny");
             b1.setEnabled(true);
@@ -174,17 +161,14 @@ class Main extends JFrame{
                 b4.setBackground(Color.yellow);
                 licznik++;
                 sprawdz++;
-                zolty = true;
             } else {
                 b4.setBackground(Color.green);
                 licznik++;
-                zolty = false;
                 sprawdz--;
             }
             ++i;
             t2.setText(String.valueOf(i));
             t3.setText(String.valueOf(sprawdz));
-
             if (sprawdz == 2) {
                 if (b1.getBackground() == Color.yellow) {
                     b2.setEnabled(false);
